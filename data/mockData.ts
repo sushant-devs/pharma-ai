@@ -349,14 +349,14 @@ export const INVOLEAD_DEMO_DATA = {
       aiInsight:
         "While core clinical value messaging is close to target, significant gaps in scientific innovation and treatment experience narratives suggest the brand is not fully communicating its differentiating science. Action-oriented messaging scores far below target.",
       tableData: [
-        { tagSource: "Key Messages", derivedFeature: "Core Clinical Value & Patient Benefit",         score: 80, target: 72, status: "Near target"    },
-        { tagSource: "Key Messages", derivedFeature: "Scientific Innovation & Novel Mechanisms",       score: 75, target: 31, status: "CRITICAL GAP"   },
-        { tagSource: "Key Messages", derivedFeature: "Enhanced Treatment Experience & Safety",         score: 70, target: 28, status: "CRITICAL GAP"   },
-        { tagSource: "Key Messages", derivedFeature: "Addressing Unmet Needs & Expanding Access",      score: 65, target: 44, status: "Below target"   },
-        { tagSource: "Tone",         derivedFeature: "Action-Oriented & Evidence-Based Persuasive",    score: 70, target: 22, status: "CRITICAL GAP"   },
-        { tagSource: "Tone",         derivedFeature: "Evidence-Driven & Foundational",                 score: 75, target: 78, status: "On target"      },
-        { tagSource: "Tone",         derivedFeature: "Relationship-Building & Empathetic",             score: 55, target: 35, status: "Below target"   },
-        { tagSource: "Tone",         derivedFeature: "Value-Oriented & Educational",                   score: 65, target: 67, status: "On target"      },
+        { tagSource: "Key Messages", derivedFeature: "Core Clinical Value & Patient Benefit",         score: 72, target: 80, status: "Near target"    },
+        { tagSource: "Key Messages", derivedFeature: "Scientific Innovation & Novel Mechanisms",       score: 31, target: 75, status: "CRITICAL GAP"   },
+        { tagSource: "Key Messages", derivedFeature: "Enhanced Treatment Experience & Safety",         score: 28, target: 70, status: "CRITICAL GAP"   },
+        { tagSource: "Key Messages", derivedFeature: "Addressing Unmet Needs & Expanding Access",      score: 44, target: 65, status: "Below target"   },
+        { tagSource: "Tone",         derivedFeature: "Action-Oriented & Evidence-Based Persuasive",    score: 22, target: 70, status: "CRITICAL GAP"   },
+        { tagSource: "Tone",         derivedFeature: "Evidence-Driven & Foundational",                 score: 78, target: 75, status: "On target"      },
+        { tagSource: "Tone",         derivedFeature: "Relationship-Building & Empathetic",             score: 35, target: 55, status: "Below target"   },
+        { tagSource: "Tone",         derivedFeature: "Value-Oriented & Educational",                   score: 67, target: 65, status: "On target"      },
       ],
       insightDashboard: {
         tiles: [
