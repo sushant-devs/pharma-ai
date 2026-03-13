@@ -623,10 +623,10 @@ export const INVOLEAD_DEMO_DATA = {
       aiInsight:
         "Generated assets are tailored to close content gaps identified by DA Sense — tolerability, combination therapy, and QoL narratives for high-prescribing specialist and KOL personas.",
       tableData: [
-        { asset: "Email",                 archetype: "Informative Layout", audience: "55% Spec, 30% KOL", personaTarget: "Innovator + Leader", personifyDist: "8,400 HCPs"     },
-        { asset: "Banner",                archetype: "Expressive Layout",  audience: "50% Spec, 50% KOL", personaTarget: "Innovator",          personifyDist: "6,200 HCPs"     },
-        { asset: "Interactive Infographic",archetype: "Expressive Layout", audience: "60% KOL, 40% Spec", personaTarget: "Leader",             personifyDist: "4,800 HCPs"     },
-        { asset: "Portal Article",        archetype: "Informative Layout", audience: "45% Spec, 35% KOL", personaTarget: "All personas",       personifyDist: "Portal feature" },
+        { asset: "Email",                  archetype: "Informative Layout", audience: "55% Spec, 30% KOL", personaTarget: "Innovator + Leader", personifyDist: "8,400 HCPs"     },
+        { asset: "Banner",                 archetype: "Expressive Layout",  audience: "50% Spec, 50% KOL", personaTarget: "Innovator",          personifyDist: "6,200 HCPs"     },
+        { asset: "Interactive Infographic",archetype: "Expressive Layout",  audience: "60% KOL, 40% Spec", personaTarget: "Leader",             personifyDist: "4,800 HCPs"     },
+        { asset: "Portal Article",         archetype: "Informative Layout", audience: "45% Spec, 35% KOL", personaTarget: "All personas",       personifyDist: "Portal feature" },
       ],
       mlrCheck: {
         score: "94/100",
@@ -634,39 +634,108 @@ export const INVOLEAD_DEMO_DATA = {
         citationsVerified: 23,
         generationTime: "< 4 minutes",
       },
+    
+      // ── Full generated e-mail (Image 1) ──────────────────────────
       generatedEmail: {
         subject: "Redefining Resilience: Why Eccentric is the Unconventional Edge Your Patients Deserve",
         preview:
-          "As a leader shaping the future of psychiatric care, you've likely seen the data: 70% of patients with treatment-resistant depression cycle through three or more therapies before finding relief...",
+          "As a leader shaping the future of psychiatric care, you've likely seen the data: 70% of patients with treatment-resistant depression cycle through three or more therapies before finding relief…",
+        body: `Dear Dr. [Last Name],
+    
+    As a leader shaping the future of psychiatric care, you've likely seen the data: 70% of patients with treatment-resistant depression cycle through three or more therapies before finding relief, yet innovation often lags behind the urgency of their stories. What if the next breakthrough wasn't about brute-force chemistry, but about harnessing the brain's own eccentric rhythms—the subtle, non-linear patterns that conventional SSRIs and SNRIs overlook?
+    
+    Enter Eccentric: the first neuromodulatory agent designed to amplify neural eccentricity, those vital "outlier" signals that foster adaptability and emotional agility. Backed by Phase III trials in *The Lancet Psychiatry* (showing 52% remission rates in TRD patients vs. 28% for standard care), Eccentric doesn't just suppress symptoms; it recalibrates the mind's inherent chaos into structured resilience. Imagine patients not merely surviving episodes, but thriving through them—regaining the innovative spark that defines leaders like yourself.
+    
+    For specialists navigating complex cases and KOLs influencing guidelines, Eccentric stands apart:
+    - **Precision Targeting**: Utilizes AI-driven pharmacogenomics to personalize dosing, reducing side-effect dropout by 40% and aligning with your innovator ethos.
+    - **Real-World Impact**: Early adopters report 65% faster return-to-function, freeing you to focus on holistic leadership rather than reactive management.
+    - **Evidence Ecosystem**: Integrated with our Eccentric Insights Platform, offering anonymized cohort analytics to fuel your research and protocols.
+    
+    This isn't incremental—it's the paradigm shift from symptom-chasing to eccentricity-embracing. As one of your visionary peers noted, "Eccentric turns the brain's quirks from liabilities into superpowers."
+    
+    I'd value 15 minutes of your time next week to explore how Eccentric integrates into your practice. Reply with your availability, or book directly here: [Calendar Link].
+    
+    Empowering your leadership,
+    Dr. Elena Vasquez
+    Chief Medical Strategist, Neurovance Therapeutics
+    elena.vasquez@neurovance.com | (555) 123-4567
+    
+    P.S. Attached: A one-pager on the "Eccentricity Quotient" model—your edge in tomorrow's consultations.`,
+        sender: {
+          name: "Dr. Elena Vasquez",
+          title: "Chief Medical Strategist, Neurovance Therapeutics",
+          email: "elena.vasquez@neurovance.com",
+          phone: "(555) 123-4567",
+        },
       },
-      insightDashboard: {
-        tiles: [
-          { label: "MLR Pre-Check Score",   value: "94/100",    trend: "Approved",     color: "#10B981" },
-          { label: "Brand Guidelines",      value: "100%",      trend: "Compliant",    color: "#10B981" },
-          { label: "Citations Verified",    value: "23/23",     trend: "All verified", color: "#10B981" },
-          { label: "Assets Generated",      value: "4 assets",  trend: "< 4 minutes",  color: "#3B82F6" },
-        ],
-        charts: [
+    
+      // ── Generated portal article (Image 1) ───────────────────────
+      generatedPortalArticle: {
+        title: "Embracing Neural Eccentricity: The Future of Mental Health Resilience",
+        body: `In the evolving landscape of psychiatric care, where 70% of treatment-resistant depression (TRD) patients endure prolonged cycles of inadequate therapies, a paradigm shift is underway. Enter Eccentric, the pioneering neuromodulatory agent that doesn't merely suppress symptoms—it amplifies the brain's innate "eccentric rhythms," those outlier signals fostering adaptability and emotional agility.
+    
+    Backed by Phase III data in The Lancet Psychiatry, Eccentric delivers 52% remission rates in TRD cases, doubling standard care's 28%. For innovators pushing boundaries, its AI-driven pharmacogenomics ensures precision dosing, slashing side-effect dropouts by 40%. Leaders shaping protocols will appreciate the 65% accelerated return-to-function, empowering holistic patient journeys.
+    
+    Whether you're a specialty physician optimizing complex cases or a KOL influencing guidelines, Eccentric transforms quirks into superpowers. Integrated with the Eccentric Insights Platform, it equips you with anonymized analytics for evidence-based evolution. In mental health's chaotic symphony, Eccentric conducts harmony—recalibrating minds for thriving, not just surviving.`,
+      },
+    
+      // ── Generated banner metadata (Image 2) ──────────────────────
+      generatedBanner: {
+        headline: "Innovation in Pharmaceuticals",
+        subheadline: "Driving the Future of Medicine",
+        cta: "Explore Our Solutions",
+        style: "Expressive Layout — gradient blue/purple, molecular background, physician illustration",
+        targetPersona: "Innovator",
+        hcpReach: "6,200 HCPs",
+      },
+    
+      // ── Generated interactive infographic metadata (Image 2) ──────
+      generatedInfographic: {
+        title: "Desyrel — Structured Information for Healthcare Professionals",
+        sections: [
           {
-            type: "bar",
-            title: "Personify Distribution by Asset (HCPs)",
-            colors: { "HCP Reach": "#3B82F6" },
-            data: [
-              { asset: "Email",                  reach: 8400 },
-              { asset: "Banner",                 reach: 6200 },
-              { asset: "Interactive Infographic",reach: 4800 },
-              { asset: "Portal Article",         reach: 9500 },
+            label: "Key Opinion Leaders (KOLs)",
+            bullets: [
+              "Influential in shaping clinical guidelines",
+              "High credibility in medical community",
+              "Targeted for broad dissemination",
+            ],
+          },
+          {
+            label: "Specialty Care Physicians (SPCs)",
+            bullets: [
+              "Focused expertise in specific conditions",
+              "Tailored clinical insights",
+              "Niche market engagement",
+            ],
+            donutData: [
+              { segment: "KOL",  value: 60, color: "#1E3A5F" },
+              { segment: "SPC",  value: 40, color: "#3B82F6" },
             ],
           },
         ],
+        style: "Structured Layout — navy header, two-column comparison, donut chart",
+        targetPersona: "Leader",
+        hcpReach: "4,800 HCPs",
       },
+    
+      // insightDashboard intentionally omitted — no insights panel for this step
       suggestions: [
         "Show post-campaign performance vs baseline",
       ],
     },
-
+    
+    
     // ─────────────────────────────────────────────────────────────
-    // STEP 11 — Post-Campaign Performance vs Baseline
+    // STEP 11 — Post-Campaign Performance vs Baseline  (UPDATED)
+    // ─────────────────────────────────────────────────────────────
+    // Key changes:
+    //   • insightDashboard tiles updated from Image 3
+    //     (TRx +10.6%, NBRx +24.0%, Revenue +$34M, Email CTR +74.2%,
+    //      ROI 4.7x, NBA Acc. 74%)
+    //   • charts updated:
+    //       – country-level performance (dual-axis bar) from Image 3
+    //       – persona recovery (two-series line) from Image 3
     // ─────────────────────────────────────────────────────────────
     {
       id: "post-campaign-performance",
@@ -674,64 +743,75 @@ export const INVOLEAD_DEMO_DATA = {
       aiResponse:
         "Results across all 6 modules show meaningful improvement after implementing the recommended strategy changes. Prescription growth, revenue recovery, and HCP engagement are all trending positively.",
       aiInsight:
-        "Consistent gains across all key metrics confirm the strategy reallocation is working. Marketing ROI has improved from 3.2x to 3.5x. Further headroom exists especially in Share of Voice and CRM last-touch improvement for high-value personas.",
+        "Consistent gains across all key metrics confirm the strategy reallocation is working. Marketing ROI has jumped from 3.2x to 4.7x. NBRx growth of +24% and Email CTR uplift of +74.2% are outpacing projections. Further headroom exists especially in Share of Voice and CRM last-touch improvement for high-value personas.",
       tableData: [
-        { metric: "Total Prescriptions (TRx)",           before: "42,200",  after: "46,000",  change: "+9.0%",  note: "Highest contributor"                    },
-        { metric: "New Patient Starts (NBRx)",            before: "10,400",  after: "11,440",  change: "+10.0%", note: "Highest efficiency; new content"         },
-        { metric: "Revenue",                              before: "$347M",   after: "$375M",   change: "+8.1%",  note: "Stable contribution"                    },
-        { metric: "Email CTR",                            before: "3.2%",    after: "3.6%",    change: "+12.5%", note: "Redirect to digital events"              },
-        { metric: "Avg Time on Content",                  before: "1.1 min", after: "1.2 min", change: "+9.1%",  note: "Saturated; diminishing returns"          },
-        { metric: "HCP Portal Visits",                    before: "71,000",  after: "78,000",  change: "+9.9%",  note: "Headroom on response curve"              },
-        { metric: "Innovative Leader Engagement",         before: "41%",     after: "46%",     change: "+12.2%", note: "New content to deploy"                  },
-        { metric: "Healthcare Leader Engagement",         before: "38%",     after: "43%",     change: "+13.2%", note: "Low efficiency at 0.27"                 },
-        { metric: "Share of Voice vs. Competitor",        before: "34%",     after: "37%",     change: "+8.8%",  note: "Significant headroom"                   },
-        { metric: "Marketing ROI",                        before: "3.2x",    after: "3.5x",    change: "+9.4%",  note: "Significant headroom"                   },
-        { metric: "Personify Rec. Acceptance",            before: "N/A",     after: "78%",     change: "—",      note: "Significant headroom"                   },
-        { metric: "CRM Last Touch (Innovative Leader)",   before: "34 days", after: "31 days", change: "-8.8%",  note: "Significant headroom"                   },
-        { metric: "CRM Last Touch (Healthcare Leader)",   before: "41 days", after: "35 days", change: "-14.6%", note: "Significant headroom"                   },
+        { metric: "Total Prescriptions (TRx)",           before: "42,200",  after: "46,000",  change: "+10.6%", note: "Market Mix Model — highest contributor"          },
+        { metric: "New Patient Starts (NBRx)",            before: "10,400",  after: "12,896",  change: "+24.0%", note: "Market Mix Model — new content driving uplift"   },
+        { metric: "Revenue",                              before: "$347M",   after: "$381M",   change: "+$34M",  note: "Market Mix Model — stable contribution"          },
+        { metric: "Email CTR",                            before: "3.2%",    after: "5.6%",    change: "+74.2%", note: "Engagement Insights — action-oriented tone shift" },
+        { metric: "Marketing ROI",                        before: "3.2x",    after: "4.7x",    change: "+46.9%", note: "Market Mix Model — significant uplift"           },
+        { metric: "NBA Acceptance Rate",                  before: "N/A",     after: "74%",     change: "—",      note: "Next Best Action — first measurement period"    },
+        { metric: "HCP Portal Visits",                    before: "71,000",  after: "78,000",  change: "+9.9%",  note: "Headroom on response curve"                     },
+        { metric: "Innovative Leader Engagement",         before: "41%",     after: "46%",     change: "+12.2%", note: "New content to deploy"                          },
+        { metric: "Healthcare Leader Engagement",         before: "38%",     after: "43%",     change: "+13.2%", note: "Low efficiency at 0.27"                         },
+        { metric: "Share of Voice vs. Competitor",        before: "34%",     after: "37%",     change: "+8.8%",  note: "Significant headroom remains"                   },
+        { metric: "CRM Last Touch (Innovative Leader)",   before: "34 days", after: "31 days", change: "-8.8%",  note: "Significant headroom"                           },
+        { metric: "CRM Last Touch (Healthcare Leader)",   before: "41 days", after: "35 days", change: "-14.6%", note: "Significant headroom"                           },
       ],
       insightDashboard: {
+        // ── Tiles — sourced directly from Image 3 ────────────────
         tiles: [
-          { label: "TRx Growth",          value: "+9.0%",  trend: "vs Baseline", color: "#10B981" },
-          { label: "Revenue Growth",      value: "+8.1%",  trend: "vs Baseline", color: "#10B981" },
-          { label: "NBRx Growth",         value: "+10.0%", trend: "vs Baseline", color: "#10B981" },
-          { label: "Marketing ROI",       value: "3.5x",   trend: "vs 3.2x",     color: "#3B82F6" },
+          { label: "TRx",       value: "+10.6%", source: "Market Mix Model",  color: "#10B981" },
+          { label: "NBRx",      value: "+24.0%", source: "Market Mix Model",  color: "#10B981" },
+          { label: "Revenue",   value: "+$34M",  source: "Market Mix Model",  color: "#10B981" },
+          { label: "Email CTR", value: "+74.2%", source: "Engagement Insights", color: "#10B981" },
+          { label: "ROI",       value: "4.7x",   source: "Market Mix Model",  color: "#10B981" },
+          { label: "NBA Acc.",  value: "74%",    source: "Next Best Action",  color: "#F97316" },
         ],
+    
         charts: [
+          // ── Chart 1: Country-Level Performance (dual-axis bar) — Image 3 ──
           {
-            type: "bar-compare",
-            title: "Before vs After: Key Performance Metrics",
-            currentColor: "#A4A4A8",
-            optimizedColor: "#10B981",
+            type: "dual-axis-bar",
+            title: "Country-Level Performance",
+            leftAxisLabel: "Prescriptions (TRx)",
+            rightAxisLabel: "Engagement %",
+            barColor: "#3B82F6",
+            lineColor: "#10B981",
             data: [
-              { name: "TRx",              current: 42200, optimized: 46000 },
-              { name: "NBRx",             current: 10400, optimized: 11440 },
-              { name: "Revenue ($M)",     current: 347,   optimized: 375   },
-              { name: "Portal Visits",    current: 71000, optimized: 78000 },
+              { country: "United States", trx: 8500, engagement: 64 },
+              { country: "Germany",       trx: 6500, engagement: 61 },
+              { country: "France",        trx: 8400, engagement: 59 },
+              { country: "United Kingdom",trx: 4900, engagement: 69 },
+              { country: "Japan",         trx: 7700, engagement: 54 },
+              { country: "Italy",         trx: 5900, engagement: 50 },
+              { country: "Spain",         trx: 6400, engagement: 62 },
+              { country: "Canada",        trx: 2900, engagement: 66 },
             ],
           },
+    
+          // ── Chart 2: Persona Recovery line — Image 3 ─────────────
           {
             type: "line",
-            title: "Engagement Trend: High-Value Personas (Before → After)",
+            title: "Persona Recovery",
+            tabs: ["Content Effectiveness", "Persona Recovery"],
             seriesColors: {
-              "Innovative Leader": "#EF4444",
-              "Healthcare Leader": "#F97316",
+              "Content Effectiveness": "#8B5CF6",
+              "Persona Recovery":      "#F97316",
             },
             data: [
-              { m: "Baseline", innovative: 41, healthcare: 38 },
-              { m: "Week 2",   innovative: 42, healthcare: 39 },
-              { m: "Week 4",   innovative: 43, healthcare: 40 },
-              { m: "Week 6",   innovative: 44, healthcare: 41 },
-              { m: "Week 8",   innovative: 45, healthcare: 42 },
-              { m: "Post",     innovative: 46, healthcare: 43 },
+              { w: "W1", contentEffectiveness: 45, personaRecovery: 41 },
+              { w: "W2", contentEffectiveness: 49, personaRecovery: 44 },
+              { w: "W3", contentEffectiveness: 52, personaRecovery: 49 },
+              { w: "W4", contentEffectiveness: 55, personaRecovery: 52 },
+              { w: "W5", contentEffectiveness: 57, personaRecovery: 55 },
+              { w: "W6", contentEffectiveness: 60, personaRecovery: 58 },
+              { w: "W7", contentEffectiveness: 62, personaRecovery: 61 },
+              { w: "W8", contentEffectiveness: 66, personaRecovery: 63 },
             ],
           },
         ],
       },
-      suggestions: [
-        "What is the engagement of HCP personas?",
-        "Give me a quarterly overview of Tecentriq's performance",
-      ],
     },
   ],
 };
