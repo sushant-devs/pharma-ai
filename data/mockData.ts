@@ -582,7 +582,7 @@ export const INVOLEAD_DEMO_DATA = {
           recommendation: "Portal push notification",
           channel: "HCP Portal + Ad",
           content: "Insightful archetype",
-          timing: "Immediate – visited competitor today",
+          timing: "Immediate",
         },
       ],
       insightDashboard: {
@@ -608,7 +608,6 @@ export const INVOLEAD_DEMO_DATA = {
       },
       suggestions: [
         "Generate content based on recommendations",
-        "Show post-campaign performance vs baseline",
       ],
     },
 
