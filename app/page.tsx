@@ -10,9 +10,9 @@ import {
   Mail, FileText, Image as ImageIcon, LayoutGrid, Copy, CheckCheck,
 } from 'lucide-react';
 import Image from 'next/image';
-
+ 
 // ─── Types ───────────────────────────────────────────────────────────────────
-
+ 
 interface MessageWithContent extends Message {
   displayedContent?: string;
   fullContent?: string;
@@ -25,27 +25,26 @@ interface MessageWithContent extends Message {
   showGenerated?: boolean;
   resolvedStepId?: string;
 }
-
+ 
 // ─── Suggestion → Step ID map ────────────────────────────────────────────────
 const SUGGESTION_STEP_MAP: Record<string, string> = {
   "What is driving the decline?": "budget-efficiency",
   "Where are our marketing budgets invested?": "budget-efficiency",
-  "How is my content performing?": "content-performance",
-  "Compare channel performance": "budget-efficiency",
-  "Compare our content vs Tecentriq benchmark": "content-benchmark",
+  "Show me the Performance of the content engagement and KPI": "content-performance",
+  "Compare our content archetype with the recommended benchmark": "content-benchmark",
   "How is the audience tagged within the content?": "audience-tagging",
   "Check messaging & tone of the content": "messaging-tone",
-  "What is the engagement of HCP personas?": "persona-engagement",
+  "Show me how HCP are Engaged": "persona-engagement",
   "Simulate optimal engagement strategy": "simulate-strategy",
   "View CRM recommendations": "persona-engagement",
   "Simulate an optimal strategy": "simulate-strategy",
-  "Show next best action for physicians": "next-best-action",
+  "Show next best action for HCP": "next-best-action",
   "Generate content based on recommendations": "generate-content",
   "Show post-campaign performance vs baseline": "post-campaign-performance",
   "What content should I prioritize?": "content-benchmark",
   "Compare content vs benchmark": "content-benchmark",
 };
-
+ 
 function guessStepFromText(text: string): string {
   const t = text.toLowerCase();
   if (t.includes('budget') || t.includes('spend') || t.includes('channel') || t.includes('mix'))
@@ -70,9 +69,9 @@ function guessStepFromText(text: string): string {
     return 'post-campaign-performance';
   return 'quarterly-overview';
 }
-
+ 
 // ─── Skeleton helpers ────────────────────────────────────────────────────────
-
+ 
 const SkeletonTile = () => (
   <div className="bg-blue-50 p-3 rounded-lg border border-blue-200 animate-pulse">
     <div className="h-3 bg-blue-200 rounded mb-2 w-16" />
@@ -80,16 +79,16 @@ const SkeletonTile = () => (
     <div className="h-2 bg-blue-200 rounded w-20" />
   </div>
 );
-
+ 
 const SkeletonChart = () => (
   <div className="bg-white rounded-lg border border-slate-200 p-3 animate-pulse">
     <div className="h-4 bg-slate-200 rounded mb-4 w-32" />
     <div className="h-40 bg-slate-100 rounded" />
   </div>
 );
-
+ 
 // ─── Copy button ──────────────────────────────────────────────────────────────
-
+ 
 function CopyButton({ text }: { text: string }) {
   const [copied, setCopied] = useState(false);
   const handleCopy = () => {
@@ -110,19 +109,19 @@ function CopyButton({ text }: { text: string }) {
     </button>
   );
 }
-
+ 
 // ─── Generated Content Block (Step 10 — chat area) ───────────────────────────
-
+ 
 function GeneratedContentBlock({ step }: { step: any }) {
   const [activeTab, setActiveTab] = useState<'email' | 'portal' | 'banner' | 'infographic'>('email');
-
+ 
   const tabs = [
     { key: 'email',       label: 'Email',        icon: <Mail size={13} /> },
     { key: 'portal',      label: 'Portal Article',icon: <FileText size={13} /> },
     { key: 'banner',      label: 'Banner',        icon: <ImageIcon size={13} /> },
     { key: 'infographic', label: 'Infographic',   icon: <LayoutGrid size={13} /> },
   ] as const;
-
+ 
   return (
     <div className="mt-2 border border-slate-200 rounded-xl overflow-hidden animate-fadeIn">
       {/* MLR bar */}
@@ -132,7 +131,7 @@ function GeneratedContentBlock({ step }: { step: any }) {
         </p>
         <span className="text-xs text-emerald-700">{step.mlrCheck?.generationTime}</span>
       </div>
-
+ 
       {/* Tabs */}
       <div className="flex border-b border-slate-200 bg-slate-50">
         {tabs.map(t => (
@@ -149,10 +148,10 @@ function GeneratedContentBlock({ step }: { step: any }) {
           </button>
         ))}
       </div>
-
+ 
       {/* Tab content */}
       <div className="p-3 bg-white">
-
+ 
         {/* ── Email ── */}
         {activeTab === 'email' && step.generatedEmail && (
           <div className="space-y-2">
@@ -177,7 +176,7 @@ function GeneratedContentBlock({ step }: { step: any }) {
             )}
           </div>
         )}
-
+ 
         {/* ── Portal Article ── */}
         {activeTab === 'portal' && step.generatedPortalArticle && (
           <div className="space-y-2">
@@ -194,7 +193,7 @@ function GeneratedContentBlock({ step }: { step: any }) {
             </div>
           </div>
         )}
-
+ 
         {/* ── Banner ── */}
         {activeTab === 'banner' && step.generatedBanner && (
           <div className="space-y-2">
@@ -225,7 +224,7 @@ function GeneratedContentBlock({ step }: { step: any }) {
             </div>
           </div>
         )}
-
+ 
         {/* ── Infographic ── */}
         {activeTab === 'infographic' && step.generatedInfographic && (
           <div className="space-y-2">
@@ -282,16 +281,16 @@ function GeneratedContentBlock({ step }: { step: any }) {
     </div>
   );
 }
-
+ 
 // ─── Chart block component ────────────────────────────────────────────────────
-
+ 
 function ChartBlock({ chart }: { chart: any }) {
   if (!chart?.data) return null;
-
+ 
   return (
     <div className="bg-white rounded-lg border border-slate-200 p-3 animate-fadeIn">
       <h4 className="text-xs font-semibold text-slate-700 mb-2">{chart.title}</h4>
-
+ 
       {chart.type === 'line' && (
         <div className="h-40">
           <ResponsiveContainer width="100%" height="100%">
@@ -311,7 +310,7 @@ function ChartBlock({ chart }: { chart: any }) {
           </ResponsiveContainer>
         </div>
       )}
-
+ 
       {chart.type === 'bar-compare' && (
         <div className="h-44">
           <ResponsiveContainer width="100%" height="100%">
@@ -327,7 +326,7 @@ function ChartBlock({ chart }: { chart: any }) {
           </ResponsiveContainer>
         </div>
       )}
-
+ 
       {chart.type === 'bar' && (
         <div className="h-44">
           <ResponsiveContainer width="100%" height="100%">
@@ -343,7 +342,7 @@ function ChartBlock({ chart }: { chart: any }) {
           </ResponsiveContainer>
         </div>
       )}
-
+ 
       {chart.type === 'horizontal-bar' && (
         <div className="h-44">
           <ResponsiveContainer width="100%" height="100%">
@@ -362,7 +361,7 @@ function ChartBlock({ chart }: { chart: any }) {
           </ResponsiveContainer>
         </div>
       )}
-
+ 
       {chart.type === 'pie' && (
         <div className="h-44">
           <ResponsiveContainer width="100%" height="100%">
@@ -381,7 +380,7 @@ function ChartBlock({ chart }: { chart: any }) {
           </ResponsiveContainer>
         </div>
       )}
-
+ 
       {chart.type === 'bubble' && (
         <div className="h-44">
           <ResponsiveContainer width="100%" height="100%">
@@ -399,7 +398,7 @@ function ChartBlock({ chart }: { chart: any }) {
           </ResponsiveContainer>
         </div>
       )}
-
+ 
       {chart.type === 'dual-axis-bar' && (
         <div className="h-48">
           <ResponsiveContainer width="100%" height="100%">
@@ -431,9 +430,9 @@ function ChartBlock({ chart }: { chart: any }) {
     </div>
   );
 }
-
+ 
 // ─── Insight Panel Tile ───────────────────────────────────────────────────────
-
+ 
 function InsightTile({ tile }: { tile: any }) {
   const isPositive = tile.color === '#10B981' || tile.color === '#22C55E';
   const valueColor = tile.color === '#EF4444' || tile.color === '#DC2626'
@@ -443,7 +442,7 @@ function InsightTile({ tile }: { tile: any }) {
       : tile.color === '#10B981' || tile.color === '#22C55E'
         ? 'text-emerald-600'
         : 'text-blue-600';
-
+ 
   return (
     <div className="bg-blue-50 p-2.5 rounded-lg border border-blue-200 animate-fadeIn">
       <p className="text-[10px] font-semibold uppercase tracking-wide text-slate-500 mb-1 truncate">
@@ -469,10 +468,10 @@ function InsightTile({ tile }: { tile: any }) {
     </div>
   );
 }
-
+ 
 // ─── Compact Table ────────────────────────────────────────────────────────────
 // Renders all rows without a scroll container so the full table is always visible.
-
+ 
 function FullTable({ data }: { data: any[] }) {
   if (!data?.length) return null;
   const keys = Object.keys(data[0]);
@@ -501,9 +500,9 @@ function FullTable({ data }: { data: any[] }) {
     </div>
   );
 }
-
+ 
 // ─── Main Component ───────────────────────────────────────────────────────────
-
+ 
 export default function ChatbotWorkshop() {
   const [messages, setMessages] = useState<MessageWithContent[]>([]);
   const [visitedStepIds, setVisitedStepIds] = useState<string[]>([]);
@@ -513,31 +512,47 @@ export default function ChatbotWorkshop() {
   const [isFocused, setIsFocused] = useState(false);
   const [isThinking, setIsThinking] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
+  const latestMsgRef = useRef<HTMLDivElement>(null);
+  const chatContainerRef = useRef<HTMLDivElement>(null);
   const streamingIntervalRef = useRef<NodeJS.Timeout | null>(null);
   const userName = 'Sarah';
-
+ 
   const panelStep = panelIndex >= 0
     ? INVOLEAD_DEMO_DATA.steps.find(s => s.id === visitedStepIds[panelIndex]) ?? null
     : null;
-
-  // ── Auto-scroll ──
+ 
+  // ── Auto-scroll to new answer ──
   useEffect(() => {
-    if (messages.length === 0) return;
+    if (messages.length === 0 || !latestMsgRef.current) return;
     const last = messages[messages.length - 1];
-    if (last.role === 'user' || (last.role === 'assistant' && !last.isStreaming)) {
-      setTimeout(() => scrollRef.current?.scrollIntoView({ behavior: 'smooth' }), 0);
+    
+    // Scroll new assistant message to top for focus
+    if (last.role === 'assistant') {
+      // Multiple scroll attempts with increasing delays
+      const doScroll = () => {
+        if (latestMsgRef.current) {
+          latestMsgRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        if (chatContainerRef.current) {
+          chatContainerRef.current.scrollTop = Math.max(0, latestMsgRef.current?.offsetTop ?? 0 - 100);
+        }
+      };
+      
+      doScroll();
+      setTimeout(doScroll, 50);
+      setTimeout(doScroll, 150);
     }
   }, [messages.length]);
-
+ 
   // ── Word-by-word streaming ──
   useEffect(() => {
     if (messages.length === 0) return;
     const lastMsg = messages[messages.length - 1];
     if (lastMsg.role !== 'assistant' || !lastMsg.fullContent || !lastMsg.isStreaming) return;
-
+ 
     const words = lastMsg.fullContent.split(' ');
     const displayedWords = (lastMsg.displayedContent || '').trim().split(' ').filter(Boolean);
-
+ 
     if (displayedWords.length >= words.length) {
       setMessages(prev => {
         const updated = [...prev];
@@ -550,7 +565,7 @@ export default function ChatbotWorkshop() {
       });
       return;
     }
-
+ 
     if (streamingIntervalRef.current) clearTimeout(streamingIntervalRef.current);
     streamingIntervalRef.current = setTimeout(() => {
       setMessages(prev => {
@@ -567,15 +582,15 @@ export default function ChatbotWorkshop() {
         return updated;
       });
     }, 50);
-
+ 
     return () => { if (streamingIntervalRef.current) clearTimeout(streamingIntervalRef.current); };
   }, [messages]);
-
+ 
   // ── Core dispatcher ──
   const dispatchStep = (stepId: string) => {
     const step = INVOLEAD_DEMO_DATA.steps.find(s => s.id === stepId);
     if (!step) return;
-
+ 
     setIsThinking(true);
     setTimeout(() => {
       setIsThinking(false);
@@ -591,7 +606,7 @@ export default function ChatbotWorkshop() {
         showFindings: false, showRecommendation: false,
         showTable: false, showGenerated: false,
       }]);
-
+ 
       setVisitedStepIds(prev => {
         const updated = [...prev, stepId];
         setPanelIndex(updated.length - 1);
@@ -600,14 +615,14 @@ export default function ChatbotWorkshop() {
       setIsPanelOpen(true);
     }, 1500);
   };
-
+ 
   const handleAction = (stepId: string) => {
     const step = INVOLEAD_DEMO_DATA.steps.find(s => s.id === stepId);
     if (!step) return;
     setMessages(prev => [...prev, { role: 'user', content: step.userPrompt }]);
     dispatchStep(stepId);
   };
-
+ 
   const handleSuggestion = (suggestionText: string) => {
     const stepId = SUGGESTION_STEP_MAP[suggestionText] ?? guessStepFromText(suggestionText);
     const step = INVOLEAD_DEMO_DATA.steps.find(s => s.id === stepId);
@@ -615,7 +630,7 @@ export default function ChatbotWorkshop() {
     setMessages(prev => [...prev, { role: 'user', content: suggestionText }]);
     dispatchStep(stepId);
   };
-
+ 
   const handleSendMessage = () => {
     if (!inputValue.trim()) return;
     const userInput = inputValue.trim();
@@ -624,10 +639,10 @@ export default function ChatbotWorkshop() {
     setIsFocused(false);
     dispatchStep(SUGGESTION_STEP_MAP[userInput] ?? guessStepFromText(userInput));
   };
-
+ 
   const canGoPrev = panelIndex > 0;
   const canGoNext = panelIndex < visitedStepIds.length - 1;
-
+ 
   // ─────────────────────────────────────────────────────────────────────────
   return (
     <div className="flex h-screen bg-white font-sans text-slate-900 overflow-hidden">
@@ -637,12 +652,12 @@ export default function ChatbotWorkshop() {
         @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.5} }
         .animate-pulse { animation: pulse 2s cubic-bezier(.4,0,.6,1) infinite; }
       `}</style>
-
+ 
       {/* ══════════════════════════════════════════
           MAIN CHAT AREA
       ══════════════════════════════════════════ */}
       <div className={`flex flex-col transition-all duration-300 ${isPanelOpen ? 'w-[60%]' : 'flex-1'}`}>
-
+ 
         {/* Navbar */}
         <header className="h-14 border-b border-slate-200 bg-white flex items-center px-6 justify-between shrink-0">
           <Image src="logo.svg" alt="Logo" height={8} width={110} priority />
@@ -658,11 +673,11 @@ export default function ChatbotWorkshop() {
             </div>
           </div>
         </header>
-
+ 
         {/* Chat feed */}
         <div className="flex-1 overflow-y-auto flex flex-col">
           {messages.length === 0 ? (
-
+ 
             /* ── Welcome screen ── */
             <div className="flex-1 flex flex-col items-center justify-center px-6">
               <div className="text-center max-w-2xl w-full">
@@ -701,31 +716,31 @@ export default function ChatbotWorkshop() {
                 </div>
               </div>
             </div>
-
+ 
           ) : (
-
+ 
             /* ── Message list ── */
-            <div className="flex-1 overflow-y-auto">
+            <div className="flex-1 overflow-y-auto" ref={chatContainerRef}>
               {/* Reduced padding: p-4 instead of p-6, space-y-3 instead of space-y-6, pb-4 instead of pb-96 */}
-              <div className="max-w-3xl mx-auto w-full p-4 space-y-3 pb-4">
+              <div className="w-full p-4 space-y-3 pb-4">
                 {messages.map((msg, idx) => {
                   const messageStep = msg.resolvedStepId
                     ? INVOLEAD_DEMO_DATA.steps.find(s => s.id === msg.resolvedStepId)
                     : undefined;
                   const isGenerateContent = msg.resolvedStepId === 'generate-content';
-
+ 
                   return (
-                    <div key={idx} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
-                      <div className={`${msg.role === 'user' ? 'max-w-xl' : 'w-full'} rounded-lg px-3 py-2.5 ${
+                    <div key={idx} ref={idx === messages.length - 1 ? latestMsgRef : undefined} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
+                      <div className={`${msg.role === 'user' ? 'max-w-2xl' : 'w-full'} rounded-lg px-3 py-2.5 ${
                         msg.role === 'user'
                           ? 'bg-blue-600 text-white'
                           : 'bg-slate-50 border border-slate-200 text-slate-900'
                       }`}>
-
+ 
                         {msg.role === 'user' && (
                           <p className="leading-relaxed text-sm">{msg.content}</p>
                         )}
-
+ 
                         {msg.role === 'assistant' && (
                           <div className="space-y-2">
                             <p className="leading-relaxed text-sm whitespace-pre-wrap min-h-[1.25rem]">
@@ -734,31 +749,31 @@ export default function ChatbotWorkshop() {
                                 <span className="inline-block w-1 h-4 bg-slate-900 ml-1 animate-pulse" />
                               )}
                             </p>
-
+ 
                             {/* Full table — no overflow scroll, always fully visible */}
                             {msg.showTable && messageStep?.tableData && (
                               <FullTable data={messageStep.tableData} />
                             )}
-
+ 
                             {msg.showAlert && messageStep?.hasAlert && (
                               <div className="flex gap-2 bg-red-50 border border-red-200 px-3 py-2 rounded-lg animate-fadeIn">
                                 <AlertCircle className="text-red-600 shrink-0 mt-0.5" size={14} />
                                 <p className="text-xs text-red-800">{messageStep.hasAlert.text}</p>
                               </div>
                             )}
-
+ 
                             {msg.showDiagnosis && messageStep?.hasDiagnosis && (
                               <div className="bg-blue-50 border border-blue-200 px-3 py-2 rounded-lg text-xs text-blue-900 animate-fadeIn">
                                 {messageStep.hasDiagnosis}
                               </div>
                             )}
-
+ 
                             {msg.showDiagnosis && !messageStep?.findings && messageStep?.aiInsight && (
                               <div className="bg-purple-50 border border-purple-200 px-3 py-2 rounded-lg text-xs text-purple-900 animate-fadeIn">
                                 {messageStep.aiInsight}
                               </div>
                             )}
-
+ 
                             {msg.showFindings && messageStep?.findings && (
                               <div className="space-y-1.5 animate-fadeIn">
                                 {messageStep.findings.map((f: any, i: number) => (
@@ -773,19 +788,19 @@ export default function ChatbotWorkshop() {
                                 ))}
                               </div>
                             )}
-
+ 
                             {msg.showRecommendation && messageStep?.aiRecommendation && (
                               <div className="bg-slate-100 px-3 py-2 rounded-lg text-xs animate-fadeIn">
                                 <p className="font-semibold text-slate-900 mb-1">Recommendation:</p>
                                 <p className="text-slate-700">{messageStep.aiRecommendation}</p>
                               </div>
                             )}
-
+ 
                             {/* Generated content block (Step 10 only) */}
                             {msg.showGenerated && isGenerateContent && messageStep && (
                               <GeneratedContentBlock step={messageStep} />
                             )}
-
+ 
                             {/* Suggestions */}
                             {!msg.isStreaming && idx === messages.length - 1 && messageStep?.suggestions && (
                               <div className="flex flex-wrap gap-1.5 mt-1">
@@ -803,7 +818,7 @@ export default function ChatbotWorkshop() {
                     </div>
                   );
                 })}
-
+ 
                 {isThinking && (
                   <div className="flex justify-start">
                     <div className="bg-slate-50 border border-slate-200 rounded-lg px-3 py-2">
@@ -815,16 +830,56 @@ export default function ChatbotWorkshop() {
                   </div>
                 )}
 
+                {/* 6 Key Wins Section - Only show after post-campaign-performance step */}
+                {messages.length > 0 && messages[messages.length - 1].resolvedStepId === 'post-campaign-performance' && (
+                  <div className="mt-8 pt-6 border-t border-slate-200">
+                    <h2 className="text-lg font-semibold text-slate-800 mb-4">6 Key wins</h2>
+                    <div className="grid grid-cols-2 gap-3">
+                      {[
+                        {
+                          title: "Content Effectiveness: Root Cause Diagnosis",
+                          desc: "Business Effectiveness identified the channel was right (Rep-Triggered Email, efficiency 0.93) but content was wrong. Content Effectiveness pinpointed the exact content-persona mismatch — 68% Factual content aimed at General Prescribers while Innovators and Leaders (58% of prescribing value) were being ignored."
+                        },
+                        {
+                          title: "Real-Time Market Intelligence",
+                          desc: "DA Sense detected the 28% surge in tolerability discussions 90 days before traditional market research. This gave Roche a first-mover advantage in addressing the emerging HCP conversation with relevant content."
+                        },
+                        {
+                          title: "Content Creator + Content Effectiveness: Rapid Asset Generation",
+                          desc: "Content Creator generated 5 compliant assets in 4 minutes, each pre-tagged with archetype, audience, and persona data. Content Effectiveness provided the specs; Content Creator executed instantly."
+                        },
+                        {
+                          title: "Next best Action: True n=1 Personalization",
+                          desc: "Instead of segment-level campaigns, Personify delivered individualized next-best-action for all 62,000 HCPs. 74% recommendation acceptance rate confirms accuracy. Each HCP received the right content, through the right channel, at the right time."
+                        },
+                        {
+                          title: "CRM: Unified Orchestration",
+                          desc: "The Unified CRM ensured consistent execution across 15 countries. Average last touch for Innovators dropped from 34 to 8 days; for Leaders, from 41 to 11 days."
+                        },
+                        {
+                          title: "Closed Loop: Continuous Learning",
+                          desc: "DA Sense signals fed Personify. Content Effectiveness scores informed Content Creator. MARS optimization directed CRM orchestration. Personify acceptance rates validated persona models. Not six tools — one intelligent system."
+                        }
+                      ].map((win, idx) => (
+                        <div key={idx} className="bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200 rounded-lg p-3 animate-fadeIn">
+                          <h3 className="font-semibold mb-1.5 text-xs text-blue-900">Win {idx + 1} — {win.title}</h3>
+                          <p className="text-xs leading-relaxed text-slate-700">{win.desc}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
                 <div ref={scrollRef} />
               </div>
             </div>
           )}
         </div>
-
+ 
         {/* ── Compact fixed input bar ── */}
         {messages.length > 0 && (
           <div className="bg-white px-4 py-2 shrink-0 border-t border-slate-200">
-            <div className="max-w-3xl mx-auto">
+            <div className="w-full">
               <div className={`bg-white rounded-lg flex items-center gap-2 px-3 py-1.5 transition-all ${isFocused ? 'border-blue-500 ring-2 ring-blue-500' : 'border border-slate-200'}`}>
                 <input type="text" placeholder="Ask anything…"
                   value={inputValue}
@@ -843,7 +898,7 @@ export default function ChatbotWorkshop() {
           </div>
         )}
       </div>
-
+ 
       {/* ══════════════════════════════════════════
           RIGHT INSIGHTS PANEL
       ══════════════════════════════════════════ */}
@@ -851,7 +906,7 @@ export default function ChatbotWorkshop() {
         isPanelOpen ? 'w-[40%] opacity-100 visible' : 'w-0 opacity-0 invisible'
       }`}>
         <div className="flex flex-col h-full min-w-0">
-
+ 
           {/* Panel header */}
           <div className="h-14 border-b border-slate-200 flex items-center justify-between px-4 shrink-0">
             <h3 className="font-semibold text-slate-800 flex items-center gap-2 text-sm">
@@ -879,7 +934,7 @@ export default function ChatbotWorkshop() {
               </button>
             </div>
           </div>
-
+ 
           {/* Context label */}
           {panelStep && (
             <div className="px-4 py-2 border-b border-slate-100 bg-slate-50 shrink-0">
@@ -888,7 +943,7 @@ export default function ChatbotWorkshop() {
               </p>
             </div>
           )}
-
+ 
           {/* Scrollable content */}
           <div className="flex-1 overflow-y-auto p-3 space-y-4">
             {isThinking && !panelStep ? (
@@ -896,9 +951,9 @@ export default function ChatbotWorkshop() {
                 <div className="grid grid-cols-2 gap-3"><SkeletonTile /><SkeletonTile /></div>
                 <SkeletonChart /><SkeletonChart />
               </div>
-
+ 
             ) : panelStep ? (
-
+ 
               panelStep.id === 'generate-content' ? (
                 <div className="space-y-3 animate-fadeIn">
                   <div className="grid grid-cols-2 gap-2">
@@ -937,7 +992,7 @@ export default function ChatbotWorkshop() {
                     </div>
                   </div>
                 </div>
-
+ 
               ) : (
                 <>
                   {panelStep.insightDashboard?.tiles && (
@@ -947,30 +1002,13 @@ export default function ChatbotWorkshop() {
                       ))}
                     </div>
                   )}
-
+ 
                   {panelStep.insightDashboard?.charts?.map((chart: any, idx: number) => (
                     <ChartBlock key={`${panelStep.id}-${idx}`} chart={chart} />
                   ))}
-
-                  {panelStep.tableData && (
-                    <div className="bg-slate-50 rounded-lg p-3 border border-slate-200">
-                      <h4 className="text-xs font-semibold text-slate-700 mb-2">Key Metrics</h4>
-                      <div className="space-y-1.5">
-                        {panelStep.tableData.slice(0, 4).map((row: any, i: number) => {
-                          const vals = Object.values(row);
-                          return (
-                            <div key={i} className="flex items-center justify-between pb-1.5 border-b border-slate-200 last:border-0">
-                              <span className="text-xs text-slate-600 truncate pr-2">{String(vals[0])}</span>
-                              <span className="text-xs font-semibold text-slate-900 shrink-0">{String(vals[2])}</span>
-                            </div>
-                          );
-                        })}
-                      </div>
-                    </div>
-                  )}
                 </>
               )
-
+ 
             ) : (
               <div className="flex flex-col items-center justify-center text-center opacity-50 pt-24">
                 <BarChart3 size={40} className="mb-4 text-slate-400" />
@@ -983,3 +1021,5 @@ export default function ChatbotWorkshop() {
     </div>
   );
 }
+ 
+ 
