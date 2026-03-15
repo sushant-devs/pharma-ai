@@ -158,7 +158,7 @@ export const INVOLEAD_DEMO_DATA = {
         ],
       },
       suggestions: [
-        "How is my content performing?",
+        "Show me the Performance of the content engagement and KPI",
         "Compare channel performance",
       ],
     },
@@ -168,7 +168,7 @@ export const INVOLEAD_DEMO_DATA = {
     // ─────────────────────────────────────────────────────────────
     {
       id: "content-performance",
-      userPrompt: "How is my content performing?",
+      userPrompt: "Show me the Performance of the content engagement and KPI",
       aiResponse:
         "I have analyzed your 47 active Tecentriq campaign assets and cross-referenced them with digital engagement signals across all channels. The 90-day trend analysis shows a concerning 28% surge in oncologist portal searches around combination therapy tolerability, yet your current content portfolio doesn't address this demand.",
       hasAlert: {
@@ -246,7 +246,7 @@ export const INVOLEAD_DEMO_DATA = {
         ],
       },
       suggestions: [
-        "Compare our content vs Tecentriq benchmark",
+        "Compare our content archetype with the recommended benchmark",
         "How is the audience tagged within the content?",
       ],
     },
@@ -256,7 +256,7 @@ export const INVOLEAD_DEMO_DATA = {
     // ─────────────────────────────────────────────────────────────
     {
       id: "content-benchmark",
-      userPrompt: "Compare our content vs Tecentriq benchmark",
+      userPrompt: "Compare our content archetype with the recommended benchmark",
       aiResponse:
         "Content Archetype Analysis reveals your portfolio is heavily skewed toward monotone layouts (68% vs. 25% benchmark), indicating low design diversity that may limit engagement and comprehension for HCP audiences. Underinvestment in structured and informative assets suggests a missed opportunity to deliver clinically rich, decision-support content aligned with industry standards.",
       aiInsight:
@@ -334,7 +334,7 @@ export const INVOLEAD_DEMO_DATA = {
       },
       suggestions: [
         "Check messaging & tone of the content",
-        "What is the engagement of HCP personas?",
+        "Show me HCP engagement  ",
       ],
     },
 
@@ -397,7 +397,7 @@ export const INVOLEAD_DEMO_DATA = {
         ],
       },
       suggestions: [
-        "What is the engagement of HCP personas?",
+        "Show me HCP engagement  ",
         "Simulate optimal strategy",
       ],
     },
@@ -407,9 +407,9 @@ export const INVOLEAD_DEMO_DATA = {
     // ─────────────────────────────────────────────────────────────
     {
       id: "persona-engagement",
-      userPrompt: "What is the engagement of HCP personas?",
+      userPrompt: "Show me HCP engagement  ",
       aiResponse:
-        "High-prescribing personas show the lowest engagement and longest CRM gaps, indicating the most valuable physicians are significantly under-engaged. Innovative Leaders, who drive 31% of prescriptions, have only 41% engagement — a critical gap that demands immediate strategic intervention.",
+        "High-prescribing personas show the lowest engagement and longest CRM gaps, indicating the most valuable HCP are significantly under-engaged. Innovative Leaders, who drive 31% of prescriptions, have only 41% engagement — a critical gap that demands immediate strategic intervention.",
       findings: [
         {
           type: "yellow",
@@ -528,7 +528,7 @@ export const INVOLEAD_DEMO_DATA = {
         ],
       },
       suggestions: [
-        "Show next best action for physicians",
+        "Show next best action for HCP",
         "Generate content based on recommendations",
       ],
     },
@@ -538,7 +538,7 @@ export const INVOLEAD_DEMO_DATA = {
     // ─────────────────────────────────────────────────────────────
     {
       id: "next-best-action",
-      userPrompt: "Show next best action for physicians",
+      userPrompt: "Show next best action for HCP",
       aiResponse:
         "Here are the Next-Best-Action recommendations for all 50,000 HCPs. AI-driven next-best-action engagement for each physician combines CRM history, prescribing behavior, and digital signals. Matching channel, timing, and content archetype to individual physician personas significantly increases the likelihood of meaningful engagement.",
       aiInsight:
@@ -622,9 +622,9 @@ export const INVOLEAD_DEMO_DATA = {
       aiInsight:
         "Generated assets are tailored to close content gaps identified by DA Sense — tolerability, combination therapy, and QoL narratives for high-prescribing specialist and KOL personas.",
       tableData: [
-        { asset: "Email",                  archetype: "Informative Layout", audience: "55% Spec, 30% KOL", personaTarget: "Innovator + Leader", personifyDist: "8,400 HCPs"     },
-        { asset: "Banner",                 archetype: "Expressive Layout",  audience: "50% Spec, 50% KOL", personaTarget: "Innovator",          personifyDist: "6,200 HCPs"     },
-        { asset: "Interactive Infographic",archetype: "Expressive Layout",  audience: "60% KOL, 40% Spec", personaTarget: "Leader",             personifyDist: "4,800 HCPs"     },
+        { asset: "Email",                  archetype: "Informative Layout", audience: "55% Spec, 30% KOL", personaTarget: "Innovator + Leader", personifyDist: "8,400 "     },
+        { asset: "Banner",                 archetype: "Expressive Layout",  audience: "50% Spec, 50% KOL", personaTarget: "Innovator",          personifyDist: "6,200 "     },
+        { asset: "Interactive Infographic",archetype: "Expressive Layout",  audience: "60% KOL, 40% Spec", personaTarget: "Leader",             personifyDist: "4,800 "     },
         { asset: "Portal Article",         archetype: "Informative Layout", audience: "45% Spec, 35% KOL", personaTarget: "All personas",       personifyDist: "Portal feature" },
       ],
       mlrCheck: {
@@ -701,7 +701,7 @@ export const INVOLEAD_DEMO_DATA = {
             ],
           },
           {
-            label: "Specialty Care Physicians (SPCs)",
+            label: "Specialty Care HCP (SPCs)",
             bullets: [
               "Focused expertise in specific conditions",
               "Tailored clinical insights",
