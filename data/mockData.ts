@@ -158,7 +158,7 @@ export const INVOLEAD_DEMO_DATA = {
         ],
       },
       suggestions: [
-        "Show me the Performance of the content engagement and KPI",
+        "Show me the performance of content engagement KPI",
         "Compare channel performance",
       ],
     },
@@ -168,7 +168,7 @@ export const INVOLEAD_DEMO_DATA = {
     // ─────────────────────────────────────────────────────────────
     {
       id: "content-performance",
-      userPrompt: "Show me the Performance of the content engagement and KPI",
+      userPrompt: "Show me the performance of content engagement KPI",
       aiResponse:
         "I have analyzed your 47 active Tecentriq campaign assets and cross-referenced them with digital engagement signals across all channels. The 90-day trend analysis shows a concerning 28% surge in oncologist portal searches around combination therapy tolerability, yet your current content portfolio doesn't address this demand.",
       hasAlert: {

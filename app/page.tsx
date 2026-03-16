@@ -30,7 +30,7 @@ interface MessageWithContent extends Message {
 const SUGGESTION_STEP_MAP: Record<string, string> = {
   "What is driving the decline?": "budget-efficiency",
   "Where are our marketing budgets invested?": "budget-efficiency",
-  "Show me the Performance of the content engagement and KPI": "content-performance",
+  "Show me the performance of content engagement KPI": "content-performance",
   "Compare our content archetype with the recommended benchmark": "content-benchmark",
   "How is the audience tagged within the content?": "audience-tagging",
   "Check messaging & tone of the content": "messaging-tone",
