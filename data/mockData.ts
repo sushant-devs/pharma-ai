@@ -334,7 +334,7 @@ export const INVOLEAD_DEMO_DATA = {
       },
       suggestions: [
         "Check messaging & tone of the content",
-        "Show me HCP engagement  ",
+        "Show me HCP Personas  ",
       ],
     },
 
@@ -397,7 +397,7 @@ export const INVOLEAD_DEMO_DATA = {
         ],
       },
       suggestions: [
-        "Show me HCP engagement  ",
+        "Show me HCP Personas  ",
         "Simulate optimal strategy",
       ],
     },
@@ -407,7 +407,7 @@ export const INVOLEAD_DEMO_DATA = {
     // ─────────────────────────────────────────────────────────────
     {
       id: "persona-engagement",
-      userPrompt: "Show me HCP engagement  ",
+      userPrompt: "Show me HCP Personas  ",
       aiResponse:
         "High-prescribing personas show the lowest engagement and longest CRM gaps, indicating the most valuable HCP are significantly under-engaged. Innovative Leaders, who drive 31% of prescriptions, have only 41% engagement — a critical gap that demands immediate strategic intervention.",
       findings: [
