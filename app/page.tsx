@@ -1,4 +1,4 @@
-"use client";
+​"use client";
 import React, { useState, useEffect, useRef } from 'react';
 import { INVOLEAD_DEMO_DATA, Message } from '../data/mockData';
 import {
@@ -523,26 +523,14 @@ export default function ChatbotWorkshop() {
  
   // ── Auto-scroll to new answer ──
   useEffect(() => {
-    if (messages.length === 0 || !latestMsgRef.current) return;
     const last = messages[messages.length - 1];
-    
-    // Scroll new assistant message to top for focus
-    if (last.role === 'assistant') {
-      // Multiple scroll attempts with increasing delays
-      const doScroll = () => {
-        if (latestMsgRef.current) {
-          latestMsgRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-        if (chatContainerRef.current) {
-          chatContainerRef.current.scrollTop = Math.max(0, latestMsgRef.current?.offsetTop ?? 0 - 100);
-        }
-      };
-      
-      doScroll();
-      setTimeout(doScroll, 50);
-      setTimeout(doScroll, 150);
-    }
-  }, [messages.length]);
+    if (!last || last.role !== 'assistant' || !latestMsgRef.current) return;
+
+    latestMsgRef.current.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  }, [messages]);
  
   // ── Word-by-word streaming ──
   useEffect(() => {
