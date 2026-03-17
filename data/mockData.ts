@@ -334,7 +334,7 @@ export const INVOLEAD_DEMO_DATA = {
       },
       suggestions: [
         "Check messaging & tone of the content",
-        "Show me HCP Personas  ",
+        "Show me HCP engagement  ",
       ],
     },
 
@@ -397,7 +397,7 @@ export const INVOLEAD_DEMO_DATA = {
         ],
       },
       suggestions: [
-        "Show me HCP Personas  ",
+        "Show me HCP engagement  ",
         "Simulate optimal strategy",
       ],
     },
@@ -407,7 +407,7 @@ export const INVOLEAD_DEMO_DATA = {
     // ─────────────────────────────────────────────────────────────
     {
       id: "persona-engagement",
-      userPrompt: "Show me HCP Personas  ",
+      userPrompt: "Show me HCP engagement  ",
       aiResponse:
         "High-prescribing personas show the lowest engagement and longest CRM gaps, indicating the most valuable HCP are significantly under-engaged. Innovative Leaders, who drive 31% of prescriptions, have only 41% engagement — a critical gap that demands immediate strategic intervention.",
       findings: [
@@ -636,30 +636,30 @@ export const INVOLEAD_DEMO_DATA = {
     
       // ── Full generated e-mail (Image 1) ──────────────────────────
       generatedEmail: {
-        subject: "Redefining Resilience: Why Eccentric is the Unconventional Edge Your Patients Deserve",
+        subject: "Redefining Resilience: Why Tecentriq is the Unconventional Edge Your Patients Deserve",
         preview:
           "As a leader shaping the future of psychiatric care, you've likely seen the data: 70% of patients with treatment-resistant depression cycle through three or more therapies before finding relief…",
         body: `Dear Dr. [Last Name],
     
-    As a leader shaping the future of psychiatric care, you've likely seen the data: 70% of patients with treatment-resistant depression cycle through three or more therapies before finding relief, yet innovation often lags behind the urgency of their stories. What if the next breakthrough wasn't about brute-force chemistry, but about harnessing the brain's own eccentric rhythms—the subtle, non-linear patterns that conventional SSRIs and SNRIs overlook?
+    As a leader shaping the future of psychiatric care, you've likely seen the data: 70% of patients with treatment-resistant depression cycle through three or more therapies before finding relief, yet innovation often lags behind the urgency of their stories. What if the next breakthrough wasn't about brute-force chemistry, but about harnessing the brain's own Tecentriq rhythms—the subtle, non-linear patterns that conventional SSRIs and SNRIs overlook?
     
-    Enter Eccentric: the first neuromodulatory agent designed to amplify neural eccentricity, those vital "outlier" signals that foster adaptability and emotional agility. Backed by Phase III trials in *The Lancet Psychiatry* (showing 52% remission rates in TRD patients vs. 28% for standard care), Eccentric doesn't just suppress symptoms; it recalibrates the mind's inherent chaos into structured resilience. Imagine patients not merely surviving episodes, but thriving through them—regaining the innovative spark that defines leaders like yourself.
+    Enter Tecentriq: the first neuromodulatory agent designed to amplify neural Tecentriqity, those vital "outlier" signals that foster adaptability and emotional agility. Backed by Phase III trials in *The Lancet Psychiatry* (showing 52% remission rates in TRD patients vs. 28% for standard care), Tecentriq doesn't just suppress symptoms; it recalibrates the mind's inherent chaos into structured resilience. Imagine patients not merely surviving episodes, but thriving through them—regaining the innovative spark that defines leaders like yourself.
     
-    For specialists navigating complex cases and KOLs influencing guidelines, Eccentric stands apart:
+    For specialists navigating complex cases and KOLs influencing guidelines, Tecentriq stands apart:
     - **Precision Targeting**: Utilizes AI-driven pharmacogenomics to personalize dosing, reducing side-effect dropout by 40% and aligning with your innovator ethos.
     - **Real-World Impact**: Early adopters report 65% faster return-to-function, freeing you to focus on holistic leadership rather than reactive management.
-    - **Evidence Ecosystem**: Integrated with our Eccentric Insights Platform, offering anonymized cohort analytics to fuel your research and protocols.
+    - **Evidence Ecosystem**: Integrated with our Tecentriq Insights Platform, offering anonymized cohort analytics to fuel your research and protocols.
     
-    This isn't incremental—it's the paradigm shift from symptom-chasing to eccentricity-embracing. As one of your visionary peers noted, "Eccentric turns the brain's quirks from liabilities into superpowers."
+    This isn't incremental—it's the paradigm shift from symptom-chasing to Tecentriqity-embracing. As one of your visionary peers noted, "Tecentriq turns the brain's quirks from liabilities into superpowers."
     
-    I'd value 15 minutes of your time next week to explore how Eccentric integrates into your practice. Reply with your availability, or book directly here: [Calendar Link].
+    I'd value 15 minutes of your time next week to explore how Tecentriq integrates into your practice. Reply with your availability, or book directly here: [Calendar Link].
     
     Empowering your leadership,
     Dr. Elena Vasquez
     Chief Medical Strategist, Neurovance Therapeutics
     elena.vasquez@neurovance.com | (555) 123-4567
     
-    P.S. Attached: A one-pager on the "Eccentricity Quotient" model—your edge in tomorrow's consultations.`,
+    P.S. Attached: A one-pager on the "Tecentriqity Quotient" model—your edge in tomorrow's consultations.`,
         sender: {
           name: "Dr. Elena Vasquez",
           title: "Chief Medical Strategist, Neurovance Therapeutics",
@@ -670,12 +670,12 @@ export const INVOLEAD_DEMO_DATA = {
     
       // ── Generated portal article (Image 1) ───────────────────────
       generatedPortalArticle: {
-        title: "Embracing Neural Eccentricity: The Future of Mental Health Resilience",
-        body: `In the evolving landscape of psychiatric care, where 70% of treatment-resistant depression (TRD) patients endure prolonged cycles of inadequate therapies, a paradigm shift is underway. Enter Eccentric, the pioneering neuromodulatory agent that doesn't merely suppress symptoms—it amplifies the brain's innate "eccentric rhythms," those outlier signals fostering adaptability and emotional agility.
+        title: "Embracing Neural Tecentriqity: The Future of Mental Health Resilience",
+        body: `In the evolving landscape of psychiatric care, where 70% of treatment-resistant depression (TRD) patients endure prolonged cycles of inadequate therapies, a paradigm shift is underway. Enter Tecentriq, the pioneering neuromodulatory agent that doesn't merely suppress symptoms—it amplifies the brain's innate "Tecentriq rhythms," those outlier signals fostering adaptability and emotional agility.
     
-    Backed by Phase III data in The Lancet Psychiatry, Eccentric delivers 52% remission rates in TRD cases, doubling standard care's 28%. For innovators pushing boundaries, its AI-driven pharmacogenomics ensures precision dosing, slashing side-effect dropouts by 40%. Leaders shaping protocols will appreciate the 65% accelerated return-to-function, empowering holistic patient journeys.
+    Backed by Phase III data in The Lancet Psychiatry, Tecentriq delivers 52% remission rates in TRD cases, doubling standard care's 28%. For innovators pushing boundaries, its AI-driven pharmacogenomics ensures precision dosing, slashing side-effect dropouts by 40%. Leaders shaping protocols will appreciate the 65% accelerated return-to-function, empowering holistic patient journeys.
     
-    Whether you're a specialty physician optimizing complex cases or a KOL influencing guidelines, Eccentric transforms quirks into superpowers. Integrated with the Eccentric Insights Platform, it equips you with anonymized analytics for evidence-based evolution. In mental health's chaotic symphony, Eccentric conducts harmony—recalibrating minds for thriving, not just surviving.`,
+    Whether you're a specialty physician optimizing complex cases or a KOL influencing guidelines, Tecentriq transforms quirks into superpowers. Integrated with the Tecentriq Insights Platform, it equips you with anonymized analytics for evidence-based evolution. In mental health's chaotic symphony, Tecentriq conducts harmony—recalibrating minds for thriving, not just surviving.`,
       },
     
       // ── Generated banner metadata (Image 2) ──────────────────────
