@@ -636,23 +636,12 @@ export const INVOLEAD_DEMO_DATA = {
     
       // ── Full generated e-mail (Image 1) ──────────────────────────
       generatedEmail: {
-        subject: "Redefining Resilience: Why Tecentriq is the Unconventional Edge Your Patients Deserve",
+        subject: "The Shift Oncology Has Been Waiting For",
         preview:
-          "As a leader shaping the future of psychiatric care, you've likely seen the data: 70% of patients with treatment-resistant depression cycle through three or more therapies before finding relief…",
-        body: `Dear Dr. [Last Name],
-    
-    As a leader shaping the future of psychiatric care, you've likely seen the data: 70% of patients with treatment-resistant depression cycle through three or more therapies before finding relief, yet innovation often lags behind the urgency of their stories. What if the next breakthrough wasn't about brute-force chemistry, but about harnessing the brain's own Tecentriq rhythms—the subtle, non-linear patterns that conventional SSRIs and SNRIs overlook?
-    
-    Enter Tecentriq: the first neuromodulatory agent designed to amplify neural Tecentriqity, those vital "outlier" signals that foster adaptability and emotional agility. Backed by Phase III trials in *The Lancet Psychiatry* (showing 52% remission rates in TRD patients vs. 28% for standard care), Tecentriq doesn't just suppress symptoms; it recalibrates the mind's inherent chaos into structured resilience. Imagine patients not merely surviving episodes, but thriving through them—regaining the innovative spark that defines leaders like yourself.
-    
-    For specialists navigating complex cases and KOLs influencing guidelines, Tecentriq stands apart:
-    - **Precision Targeting**: Utilizes AI-driven pharmacogenomics to personalize dosing, reducing side-effect dropout by 40% and aligning with your innovator ethos.
-    - **Real-World Impact**: Early adopters report 65% faster return-to-function, freeing you to focus on holistic leadership rather than reactive management.
-    - **Evidence Ecosystem**: Integrated with our Tecentriq Insights Platform, offering anonymized cohort analytics to fuel your research and protocols.
-    
-    This isn't incremental—it's the paradigm shift from symptom-chasing to Tecentriqity-embracing. As one of your visionary peers noted, "Tecentriq turns the brain's quirks from liabilities into superpowers."
-    
-    I'd value 15 minutes of your time next week to explore how Tecentriq integrates into your practice. Reply with your availability, or book directly here: [Calendar Link].
+          "As a leader shaping the future of oncology care, you’ve likely witnessed the sobering reality: many patients cycle through multiple lines of therapy before achieving meaningful outcomes,",
+        body: `As a leader shaping the future of oncology care, you’ve likely witnessed the sobering reality: many patients cycle through multiple lines of therapy before achieving meaningful outcomes, while the pace of innovation often struggles to match the urgency of their diagnoses. What if the next breakthrough wasn’t just about stronger cytotoxic agents, but about smarter, more adaptive approaches that work in harmony with each patient’s unique tumor biology?
+
+Enter OncoNova: a next-generation targeted therapy platform designed to address tumor heterogeneity and resistance at its core. Backed by Phase III clinical data published in leading oncology journals (demonstrating significantly improved progression-free survival compared to standard-of-care treatments), OncoNova goes beyond traditional approaches—delivering precision-guided efficacy with improved tolerability.
     
     Empowering your leadership,
     Dr. Elena Vasquez
