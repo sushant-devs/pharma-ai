@@ -638,15 +638,30 @@ export const INVOLEAD_DEMO_DATA = {
       generatedEmail: {
         subject: "The Shift Oncology Has Been Waiting For",
         preview:
-          "As a leader shaping the future of oncology care, you’ve likely witnessed the sobering reality: many patients cycle through multiple lines of therapy before achieving meaningful outcomes,",
-        body: `As a leader shaping the future of oncology care, you’ve likely witnessed the sobering reality: many patients cycle through multiple lines of therapy before achieving meaningful outcomes, while the pace of innovation often struggles to match the urgency of their diagnoses. What if the next breakthrough wasn’t just about stronger cytotoxic agents, but about smarter, more adaptive approaches that work in harmony with each patient’s unique tumor biology?
+          "As a leader shaping the future of oncology care, you’ve likely witnessed the sobering reality: many patients cycle through multiple lines of therapy before achieving meaningful outcomes, while the pace of innovation often struggles to match",
+        body: `Dear Dr. [Last Name],
+
+As a leader shaping the future of oncology care, you’ve likely witnessed the sobering reality: many patients cycle through multiple lines of therapy before achieving meaningful outcomes, while the pace of innovation often struggles to match the urgency of their diagnoses. What if the next breakthrough wasn’t just about stronger cytotoxic agents, but about smarter, more adaptive approaches that work in harmony with each patient’s unique tumor biology?
 
 Enter OncoNova: a next-generation targeted therapy platform designed to address tumor heterogeneity and resistance at its core. Backed by Phase III clinical data published in leading oncology journals (demonstrating significantly improved progression-free survival compared to standard-of-care treatments), OncoNova goes beyond traditional approaches—delivering precision-guided efficacy with improved tolerability.
-    
-    Empowering your leadership,
-    Dr. Elena Vasquez
-    Chief Medical Strategist, Neurovance Therapeutics
-    elena.vasquez@neurovance.com | (555) 123-4567
+
+For specialists managing complex oncology cases and thought leaders influencing treatment pathways, OncoNova offers:
+
+**Precision Oncology**: Leveraging AI-driven genomic profiling to tailor treatment strategies, improving response rates while minimizing unnecessary toxicity.
+**Real-World Outcomes**: Early clinical adoption indicates faster disease control and improved quality-of-life metrics, allowing you to focus on comprehensive patient care.
+**Integrated Insights**: Access to the OncoNova Data Platform, enabling anonymized cohort analytics to support your research, publications, and clinical decision-making.
+
+This is more than incremental progress—it’s a shift toward truly personalized cancer care. As one of your peers shared, “The future of oncology lies in understanding each tumor’s story—and responding with precision.”
+
+I would value 15 minutes of your time next week to discuss how OncoNova can integrate into your clinical practice. Please reply with your availability, or book directly here: [Calendar Link].
+
+Advancing care together,
+Dr. Elena Vasquez
+Chief Medical Strategist, Neurovance Therapeutics
+[elena.vasquez@neurovance.com](mailto:elena.vasquez@neurovance.com) | (555) 123-4567
+
+P.S. Attached: A one-pager on our precision oncology framework—designed to support your next breakthrough in patient care.
+
     
     P.S. Attached: A one-pager on the "Tecentriqity Quotient" model—your edge in tomorrow's consultations.`,
         sender: {
